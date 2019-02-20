@@ -103,4 +103,6 @@ shinyServer(function(input, output) {
     output$plot1 <- renderPlot({
         plot(varImp(mf(), scale = FALSE, xlab = "Importance", title = "Plotting Variable Importance"))
     })
+
+    output$strIRIS <- renderPrint(str(iris))
 })
